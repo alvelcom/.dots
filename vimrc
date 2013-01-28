@@ -85,3 +85,6 @@ set ofu=syntaxcomplete#Complete
 " VimErl
 let erlang_skel_header = {'author': 'Paul Khusainov <alvelcom@gmail.com>',
                        \  'owner' : 'Paul Khusainov'}
+
+" FuzzyFinder
+noremap <silent> <F3> :FufFile<CR>
