@@ -1,6 +1,7 @@
-set nocompatible               " be iMproved
+ set nocompatible               " be iMproved
  filetype off                   " required!
 
+ set path+=/usr/local/include,**
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
 
@@ -39,7 +40,7 @@ set nocompatible               " be iMproved
  "
  " see :h vundle for more details or wiki for FAQ
  " NOTE: comments after Bundle command are not allowed..
-
+set rtp+=/usr/share/vim/vim73
 
 " Young boy helpers
 " disable arrow keys
@@ -69,7 +70,7 @@ set shiftwidth=4
 set expandtab
 
 set spelllang=en,ru,de
-set keymap=russian-jcukewin
+set keymap=russian-jcuken
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
