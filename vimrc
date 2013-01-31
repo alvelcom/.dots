@@ -70,7 +70,7 @@ set shiftwidth=4
 set expandtab
 
 set spelllang=en,ru,de
-set keymap=russian-jcuken
+set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
