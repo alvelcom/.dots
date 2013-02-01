@@ -40,7 +40,6 @@
  "
  " see :h vundle for more details or wiki for FAQ
  " NOTE: comments after Bundle command are not allowed..
-set rtp+=/usr/share/vim/vim73
 
 " Young boy helpers
 " disable arrow keys
