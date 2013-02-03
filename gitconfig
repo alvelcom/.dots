@@ -1,0 +1,11 @@
+[user]
+	name = Paul Khusainov
+	email = alvelcom@gmail.com
+[merge]
+	tool = kdiff3
+[github]
+	user = alvelcom
+[color]
+	ui = auto
+[alias]
+    st = status
