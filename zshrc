@@ -22,7 +22,9 @@ precmd () { vcs_info }
 
 PROMPT='%B[%F{red}%n%b%f@%B%F{cyan}%m%b%f%B]%b '
 RPROMPT='${vcs_info_msg_0_} %F{green}%4~%f'
-bindkey -v
+
+# Force emacs key bindings
+bindkey -e
 
 # Keep 30000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=30000

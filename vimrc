@@ -62,7 +62,7 @@ colorscheme desert
 set relativenumber
 set wildmenu
 set scrolloff=3
-set smartindent
+set autoindent
 
 set tabstop=4
 set shiftwidth=4
