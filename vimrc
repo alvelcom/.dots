@@ -29,6 +29,7 @@
  
  " Languages
  Bundle 'jimenezrick/vimerl'
+ Bundle 'gkz/vim-ls'
 
  filetype plugin indent on     " required!
  "
