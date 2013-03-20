@@ -30,6 +30,7 @@
  " Languages
  Bundle 'jimenezrick/vimerl'
  Bundle 'gkz/vim-ls'
+ Bundle 'digitaltoad/vim-jade'
 
  filetype plugin indent on     " required!
  "
