@@ -18,6 +18,7 @@
  Bundle 'tpope/vim-fugitive'
  Bundle 'mattn/gist-vim'
  Bundle 'FuzzyFinder'
+ Bundle 'scrooloose/nerdtree'
 
  " Editing
  Bundle 'tpope/vim-speeddating'
@@ -89,3 +90,6 @@ let erlang_skel_header = {'author': 'Paul Khusainov <alvelcom@gmail.com>',
 
 " FuzzyFinder
 noremap <silent> <F3> :FufCoverageFile<CR>
+
+" NERDTree
+noremap <silent> <F4> :NERDTreeToggle<CR>
