@@ -93,3 +93,7 @@ noremap <silent> <F3> :FufCoverageFile<CR>
 
 " NERDTree
 noremap <silent> <F4> :NERDTreeToggle<CR>
+
+" Tabs
+noremap <silent> <F5> :tabnew<CR>
+
