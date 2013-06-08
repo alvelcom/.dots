@@ -62,7 +62,7 @@ syntax enable
 colorscheme desert
 
 
-set relativenumber
+"set relativenumber " - quite slow :'-(
 set wildmenu
 set scrolloff=3
 set autoindent
