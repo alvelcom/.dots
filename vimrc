@@ -16,6 +16,8 @@
 
  Bundle 'LnL7/vim-conque'
  Bundle 'tpope/vim-fugitive'
+ Bundle 'kablamo/vim-git-log'
+
  Bundle 'mattn/gist-vim'
  Bundle 'FuzzyFinder'
  Bundle 'scrooloose/nerdtree'
@@ -30,6 +32,7 @@
  
  " Languages
  Bundle 'jimenezrick/vimerl'
+ Bundle 'vim-erlang/vim-erlang-tags'
  Bundle 'gkz/vim-ls'
  Bundle 'digitaltoad/vim-jade'
 

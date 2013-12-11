@@ -2,7 +2,7 @@
 	name = Paul Khusainov
 	email = alvelcom@gmail.com
 [merge]
-	tool = kdiff3
+	tool = vimdiff
 [github]
 	user = alvelcom
 [color]
