@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+git clone https://github.com/gmarik/vundle.git vim/bundle/vundle &
+
+for file in zshrc vim vimrc gitconfig hgconfig
+do
+    echo $file
+    mv -f ".${file}" ".${file}.backup"
+    ln -s ".dots/${file}" ".${file}"
+
+    [ "$1" = "mz" ] && \
+        sed -i 's/alvelcom@gmail.com/pkhusainov@machinezone.com/' ".$file"
+done
+
+
