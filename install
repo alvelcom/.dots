@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-git clone https://github.com/gmarik/vundle.git vim/bundle/vundle &
+git clone https://github.com/gmarik/vundle.git .dots/vim/bundle/vundle &
 
 for file in zshrc vim vimrc gitconfig hgconfig
 do
