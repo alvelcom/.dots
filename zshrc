@@ -1,4 +1,4 @@
-alias ls="ls --color"
+alias ls="ls"
 alias ll="ls -l"
 alias grep="grep --color"
 
@@ -9,7 +9,7 @@ export EDITOR=vim
 
 FAIL_SAFE=""
 
-if [[ `cut -f1 -d' ' /proc/loadavg` > 3 ]]
+if [ -r /proc/loadavg ] && [[ `cut -f1 -d' ' /proc/loadavg` > 3 ]]
 then
     echo "zsh running in failsafe mode"
     FAIL_SAFE=1
