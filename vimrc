@@ -70,6 +70,8 @@ set wildmenu
 set scrolloff=3
 set autoindent
 
+set modeline
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
