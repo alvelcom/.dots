@@ -47,16 +47,14 @@
  " see :h vundle for more details or wiki for FAQ
  " NOTE: comments after Bundle command are not allowed..
 
-" Young boy helpers
-" disable arrow keys
-map  <up>    <nop>
-map  <down>  <nop>
-map  <left>  <nop>
-map  <right> <nop>
-imap <up>    <nop>
-imap <down>  <nop>
-imap <left>  <nop>
-imap <right> <nop>
+map  <up>    :ls<cr>
+map  <down>  <C-^>
+map  <left>  :bp<cr>
+map  <right> :bn<cr>
+imap  <up>    <nop>
+imap  <down>  <nop>
+imap  <left>  <nop>
+imap  <right> <nop>
 
 " Set style
 "===
