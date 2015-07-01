@@ -65,6 +65,7 @@ colorscheme desert
 
 "set relativenumber " - quite slow :'-(
 set wildmenu
+set wildmode=longest:list,full
 set scrolloff=3
 set autoindent
 
