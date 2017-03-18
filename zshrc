@@ -2,14 +2,15 @@ alias ls="ls"
 alias ll="ls -l"
 alias grep="grep --color"
 
-export PATH=~/.cabal/bin:~/.rvm/bin:~/.bin:$PATH:/bin:/usr/bin:/usr/local/bin
+export PATH=~/.cargo/bin:~/.cabal/bin:~/.rvm/bin:~/.bin:$PATH:/bin:/usr/bin:/usr/local/bin
 
-if which vim > /dev/null 2>&1 ; then
+if which vim &> /dev/null; then
     export EDITOR=vim
-elif which vi > /dev/null 2>&1 ; then
+elif which vi &> /dev/null; then
     export EDITOR=vi
 fi
 
+export LANG=en_US.UTF-8
 
 FAIL_SAFE=""
 
