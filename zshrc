@@ -10,7 +10,6 @@ elif which vi > /dev/null 2>&1 ; then
     export EDITOR=vi
 fi
 
-
 FAIL_SAFE=""
 
 if [ -r /proc/loadavg ] && [[ `cut -f1 -d' ' /proc/loadavg` > 3 ]]
@@ -89,3 +88,4 @@ then
     zstyle ':vcs_info:*:*'   stagedstr "♼"
 fi
 
+[ -r ~/.dots/zshrc_local ] && source ~/.dots/zshrc_local
