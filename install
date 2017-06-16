@@ -7,7 +7,7 @@ do
     ln -vs ".dots/${file}" ".${file}"
 
     [ "$1" = "mz" ] && \
-        sed -i 's/alvelcom@gmail.com/pkhusainov@machinezone.com/' ".$file"
+        sed -i 's/alvelcom@gmail.com/pkhusainov@mz.com/' ".$file"
 done
 
 git clone https://github.com/gmarik/vundle.git .dots/vim/bundle/vundle
