@@ -2,22 +2,22 @@ alias ls="ls"
 alias ll="ls -l"
 alias grep="grep --color"
 
-export PATH=~/.cabal/bin:~/.rvm/bin:~/.bin:$PATH:/bin:/usr/bin:/usr/local/bin
+export LANG=en_US.UTF-8
+export PATH=~/.cargo/bin:~/.cabal/bin:~/.rvm/bin:~/.bin:$PATH:/bin:/usr/bin:/usr/local/bin
 
-if which vim > /dev/null 2>&1 ; then
+if which vim &> /dev/null; then
     export EDITOR=vim
-elif which vi > /dev/null 2>&1 ; then
+elif which vi &> /dev/null; then
     export EDITOR=vi
 fi
-
-FAIL_SAFE=""
 
 if [ -r /proc/loadavg ] && [[ `cut -f1 -d' ' /proc/loadavg` > 3 ]]
 then
     echo "zsh running in failsafe mode"
-    FAIL_SAFE=1
+    export FAIL_SAFE=1
+else
+    export FAIL_SAFE=""
 fi
-export FAIL_SAFE
 
 # Set up the prompt
 autoload -Uz promptinit
@@ -30,7 +30,7 @@ colors
 setopt PROMPT_SUBST
 
 # VCS_INFO
-if [ -z $FAIL_SAFE ]
+if [ -z "$FAIL_SAFE" ]
 then
     autoload -Uz vcs_info
     precmd () { vcs_info }
