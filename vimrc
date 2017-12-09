@@ -31,10 +31,7 @@
  Bundle 'scrooloose/syntastic'
  
  " Languages
- Bundle 'jimenezrick/vimerl'
- Bundle 'vim-erlang/vim-erlang-tags'
- Bundle 'gkz/vim-ls'
- Bundle 'digitaltoad/vim-jade'
+ Bundle 'fatih/vim-go'
 
  filetype plugin indent on     " required!
  "
@@ -85,6 +82,7 @@ highlight lCursor guifg=NONE guibg=Cyan
 map <silent> <F2> :w<CR>
 imap <F10> 
 
+set foldmethod=indent
 " OMNI
 set ofu=syntaxcomplete#Complete
 

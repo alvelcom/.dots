@@ -7,6 +7,7 @@ export PATH=~/.cargo/bin:~/.cabal/bin:~/.rvm/bin:~/.bin:$PATH:/bin:/usr/bin:/usr
 
 if which vim &> /dev/null; then
     export EDITOR=vim
+    alias vi=vim
 elif which vi &> /dev/null; then
     export EDITOR=vi
 fi
@@ -82,10 +83,16 @@ then
     zstyle ':vcs_info:*' enable hg git svn
     zstyle ':vcs_info:(hg*|git*):*' check-for-changes true
 
-    zstyle ':vcs_info:*' formats "%F{magenta}⚡%s%c%u %b%f"
-    zstyle ':vcs_info:*' actionformats "%F{magenta}⚡%s♯%a%c%u %b%f"
-    zstyle ':vcs_info:*:*' unstagedstr "⚑"
-    zstyle ':vcs_info:*:*'   stagedstr "♼"
+    zstyle ':vcs_info:*' formats "%F{magenta} %s%c%u %b%f"
+    zstyle ':vcs_info:*' actionformats "%F{magenta} %s♯%a%c%u %b%f"
+    zstyle ':vcs_info:*:*' unstagedstr "unst"
+    zstyle ':vcs_info:*:*'   stagedstr "st"
 fi
 
 [ -r ~/.dots/zshrc_local ] && source ~/.dots/zshrc_local
+export GOPATH=~/go
+export GOBIN=~/go/bin
+export PATH="$PATH:$GOBIN"
+
+
+
