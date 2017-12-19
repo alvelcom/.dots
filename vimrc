@@ -19,7 +19,7 @@
  Bundle 'kablamo/vim-git-log'
 
  Bundle 'mattn/gist-vim'
- Bundle 'FuzzyFinder'
+ Bundle 'junegunn/fzf'
  Bundle 'scrooloose/nerdtree'
 
  " Editing
@@ -27,6 +27,7 @@
  Bundle 'sjas/rainbow_parentheses'
  Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'mileszs/ack.vim'
+ Bundle 'tpope/vim-unimpaired'
 
  Bundle 'scrooloose/syntastic'
  
@@ -91,7 +92,7 @@ let erlang_skel_header = {'author': 'Paul Khusainov <alvelcom@gmail.com>',
                        \  'owner' : 'Paul Khusainov'}
 
 " FuzzyFinder
-noremap <silent> <F3> :FufCoverageFile<CR>
+noremap <silent> <F3> :FZF<CR>
 
 " NERDTree
 noremap <silent> <F4> :NERDTreeToggle<CR>
