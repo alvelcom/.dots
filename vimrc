@@ -60,8 +60,6 @@ imap  <right> <nop>
 syntax enable
 colorscheme desert
 
-
-"set relativenumber " - quite slow :'-(
 set wildmenu
 set wildmode=longest:list,full
 set scrolloff=3
@@ -73,30 +71,31 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+set breakindent
+set breakindentopt=shift:4,sbr
+set showbreak=-->
+
 set spelllang=en,ru,de
-set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+
+set formatoptions+=j
+set foldmethod=indent
+
+" OMNI
+set ofu=syntaxcomplete#Complete
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Some keyboard bindings
 map <silent> <F2> :w<CR>
 imap <F10> 
 
-set foldmethod=indent
-" OMNI
-set ofu=syntaxcomplete#Complete
-
-" VimErl
-let erlang_skel_header = {'author': 'Paul Khusainov <alvelcom@gmail.com>',
-                       \  'owner' : 'Paul Khusainov'}
-
 " FuzzyFinder
-noremap <silent> <F3> :FZF<CR>
-
 " NERDTree
-noremap <silent> <F4> :NERDTreeToggle<CR>
-
 " Tabs
+noremap <silent> <F3> :FZF<CR>
+noremap <silent> <F4> :NERDTreeToggle<CR>
 noremap <silent> <F5> :tabnew<CR>
 

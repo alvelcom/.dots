@@ -45,6 +45,11 @@ RPROMPT='${vcs_info_msg_0_} %F{green}%4~%f'
 # Force emacs key bindings
 bindkey -e
 
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+
 # Keep 30000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=30000
 SAVEHIST=30000
@@ -56,6 +61,7 @@ HISTFILE=~/.zsh_history
 # setopt share_history
 # Remove dups from history
 setopt HIST_SAVE_NO_DUPS
+
 
 # Use modern completion system
 autoload -Uz compinit
@@ -83,8 +89,8 @@ then
     zstyle ':vcs_info:*' enable hg git svn
     zstyle ':vcs_info:(hg*|git*):*' check-for-changes true
 
-    zstyle ':vcs_info:*' formats "%F{magenta} %s%c%u %b%f"
-    zstyle ':vcs_info:*' actionformats "%F{magenta} %s♯%a%c%u %b%f"
+    zstyle ':vcs_info:*' formats "%F{magenta} %c%u %b%f"
+    zstyle ':vcs_info:*' actionformats "%F{magenta} ♯%a%c%u %b%f"
     zstyle ':vcs_info:*:*' unstagedstr "unst"
     zstyle ':vcs_info:*:*'   stagedstr "st"
 fi
