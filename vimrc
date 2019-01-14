@@ -83,7 +83,7 @@ set undofile
 set ofu=syntaxcomplete#Complete
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
+let g:fzf_history_dir = "~/.dots/fzf-history"
 " Some keyboard bindings
 map <silent> <F2> :w<CR>
 imap <F10> 
