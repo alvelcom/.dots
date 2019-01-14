@@ -1,17 +1,3 @@
-alias ls="ls"
-alias ll="ls -l"
-alias grep="grep --color"
-
-export LANG=en_US.UTF-8
-export PATH=~/.cargo/bin:~/.cabal/bin:~/.rvm/bin:~/.bin:$PATH:/bin:/usr/bin:/usr/local/bin
-
-if which vim &> /dev/null; then
-    export EDITOR=vim
-    alias vi=vim
-elif which vi &> /dev/null; then
-    export EDITOR=vi
-fi
-
 if [ -r /proc/loadavg ] && [[ `cut -f1 -d' ' /proc/loadavg` > 3 ]]
 then
     echo "zsh running in failsafe mode"
@@ -53,6 +39,7 @@ bindkey '^x^e' edit-command-line
 # Keep 30000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=30000
 SAVEHIST=30000
+HISTCONTROL=ignorespace:ignoredups
 HISTFILE=~/.zsh_history
 
 # Appends every command to the history file once it is executed
@@ -95,10 +82,31 @@ then
     zstyle ':vcs_info:*:*'   stagedstr "st"
 fi
 
-[ -r ~/.dots/zshrc_local ] && source ~/.dots/zshrc_local
+if which vim &> /dev/null; then
+    export EDITOR=vim
+    alias vi=vim
+elif which vi &> /dev/null; then
+    export EDITOR=vi
+fi
+
+stat_bin=stat
+if which gstat &> /dev/null; then
+    stat_bin=gstat
+fi
+
+alias ls="ls"
+alias ll="ls -l"
+alias grep="grep --color"
+alias changedfiles="find . -type f -not -path '*/.git/*' -print0 | xargs -0 "${stat_bin}" --format '%Z :%z %n' | sort -nr | cut -d: -f2- | head -n 20"
+
+export LANG=en_US.UTF-8
+export PATH=~/.cargo/bin:~/.cabal/bin:~/.rvm/bin:~/.bin:$PATH:/bin:/usr/bin:/usr/local/bin
+
 export GOPATH=~/go
 export GOBIN=~/go/bin
 export PATH="$PATH:$GOBIN"
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+export GPG_TTY="$(tty)"
 
-
+[ -r ~/.dots/zshrc_local ] && source ~/.dots/zshrc_local

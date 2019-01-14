@@ -12,9 +12,7 @@
  " My Bundles here:
  "
  Bundle 'L9'
- Bundle 'mattn/webapi-vim'
 
- Bundle 'LnL7/vim-conque'
  Bundle 'tpope/vim-fugitive'
  Bundle 'kablamo/vim-git-log'
 
@@ -23,14 +21,9 @@
  Bundle 'scrooloose/nerdtree'
 
  " Editing
- Bundle 'tpope/vim-speeddating'
- Bundle 'sjas/rainbow_parentheses'
- Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'mileszs/ack.vim'
  Bundle 'tpope/vim-unimpaired'
 
- Bundle 'scrooloose/syntastic'
- 
  " Languages
  Bundle 'fatih/vim-go'
 
