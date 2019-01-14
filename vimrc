@@ -83,6 +83,9 @@ highlight lCursor guifg=NONE guibg=Cyan
 set formatoptions+=j
 set foldmethod=indent
 
+set undodir=~/.dots/vim-undo
+set undofile
+
 " OMNI
 set ofu=syntaxcomplete#Complete
 
