@@ -2,19 +2,19 @@
 	name = Pavel Khusainov
 	email = alvelcom@gmail.com
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 [github]
-	user = alvelcom
+    user = alvelcom
 [color]
-	ui = auto
+    ui = auto
 [alias]
     br = brach
     co = checkout
     st = status
 [push]
-	default = simple
+    default = simple
 [core]
-	excludesfile = /Users/pkhusainov/.gitignore_global
+    excludesfile = /Users/pkhusainov/.gitignore_global
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
