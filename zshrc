@@ -25,8 +25,12 @@ fi
 
 
 # Set the prompt.
-PROMPT='%B[%F{red}%n%b%f@%B%F{cyan}%m%b%f%B]%b '
-RPROMPT='${vcs_info_msg_0_} %F{green}%4~%f'
+if ! ps -p $PPID | grep -q "mc"; then
+    PROMPT='%B[%F{red}%n%b%f@%B%F{cyan}%m%b%f%B]%b '
+    RPROMPT='${vcs_info_msg_0_} %F{green}%2~%f'
+else
+    PROMPT="> "
+fi
 
 # Force emacs key bindings
 bindkey -e
