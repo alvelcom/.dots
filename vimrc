@@ -14,11 +14,10 @@
  Bundle 'L9'
 
  Bundle 'tpope/vim-fugitive'
- Bundle 'kablamo/vim-git-log'
 
  Bundle 'mattn/gist-vim'
  Bundle 'junegunn/fzf'
- Bundle 'scrooloose/nerdtree'
+ Bundle 'junegunn/fzf.vim'
 
  " Editing
  Bundle 'mileszs/ack.vim'
@@ -75,6 +74,7 @@ highlight lCursor guifg=NONE guibg=Cyan
 
 set formatoptions+=j
 set foldmethod=indent
+set foldlevel=1
 
 set undodir=~/.dots/vim-undo
 set undofile
@@ -89,9 +89,8 @@ map <silent> <F2> :w<CR>
 imap <F10> 
 
 " FuzzyFinder
-" NERDTree
 " Tabs
 noremap <silent> <F3> :FZF<CR>
-noremap <silent> <F4> :NERDTreeToggle<CR>
+noremap <silent> <F4> :Buffers<CR>
 noremap <silent> <F5> :tabnew<CR>
 
