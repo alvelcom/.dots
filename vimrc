@@ -49,7 +49,7 @@ imap  <right> <nop>
 " Set style
 "===
 
-syntax enable
+syntax off
 colorscheme desert
 
 set wildmenu
