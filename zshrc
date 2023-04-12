@@ -101,7 +101,6 @@ fi
 alias ls="ls"
 alias ll="ls -l"
 alias grep="grep --color"
-alias changedfiles="find . -type f -not -path '*/.git/*' -print0 | xargs -0 "${stat_bin}" --format '%Z :%z %n' | sort -nr | cut -d: -f2- | head -n 20"
 
 export LANG=en_US.UTF-8
 export PATH=~/.cargo/bin:~/.cabal/bin:~/.rvm/bin:~/.bin:$PATH:/bin:/usr/bin:/usr/local/bin
@@ -110,6 +109,10 @@ export GOPATH=~/go
 export GOBIN=~/go/bin
 export PATH="$PATH:$GOBIN"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+if type ag &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
+fi
 
 export GPG_TTY="$(tty)"
 

@@ -2,3 +2,5 @@
 *.swo
 todo.txt-cli
 vim-undo/
+vim/.netrwhist
+fzf-history

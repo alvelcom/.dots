@@ -22,6 +22,7 @@
  " Editing
  Bundle 'mileszs/ack.vim'
  Bundle 'tpope/vim-unimpaired'
+ Bundle 'wellle/context.vim'
 
  " Languages
  Bundle 'fatih/vim-go'
@@ -37,20 +38,10 @@
  " see :h vundle for more details or wiki for FAQ
  " NOTE: comments after Bundle command are not allowed..
 
-map  <up>    :ls<cr>
-map  <down>  <C-^>
-map  <left>  :bp<cr>
-map  <right> :bn<cr>
-imap  <up>    <nop>
-imap  <down>  <nop>
-imap  <left>  <nop>
-imap  <right> <nop>
-
 " Set style
 "===
 
 syntax off
-colorscheme desert
 
 set wildmenu
 set wildmode=longest:list,full
@@ -84,6 +75,7 @@ set ofu=syntaxcomplete#Complete
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:fzf_history_dir = "~/.dots/fzf-history"
+
 " Some keyboard bindings
 map <silent> <F2> :w<CR>
 imap <F10> 
@@ -94,3 +86,5 @@ noremap <silent> <F3> :FZF<CR>
 noremap <silent> <F4> :Buffers<CR>
 noremap <silent> <F5> :tabnew<CR>
 
+" Context
+let g:context_max_per_indent = 2
