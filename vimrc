@@ -23,6 +23,7 @@
  Bundle 'mileszs/ack.vim'
  Bundle 'tpope/vim-unimpaired'
  Bundle 'wellle/context.vim'
+ Bundle 'mg979/vim-visual-multi', {'branch': 'master'}
 
  " Languages
  Bundle 'fatih/vim-go'
