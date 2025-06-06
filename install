@@ -1,13 +1,10 @@
 #!/usr/bin/env sh
 
-for file in zshrc vim vimrc gitconfig hgrc
+for file in zshrc vim vimrc gitconfig tmux.conf
 do
     echo $file
     mv -f ".${file}" ".${file}.backup"
     ln -vs ".dots/${file}" ".${file}"
-
-    [ "$1" = "mz" ] && \
-        sed -i 's/alvelcom@gmail.com/pkhusainov@mz.com/' ".$file"
 done
 
 git clone https://github.com/gmarik/vundle.git .dots/vim/bundle/vundle

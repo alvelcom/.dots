@@ -22,11 +22,13 @@
  " Editing
  Bundle 'mileszs/ack.vim'
  Bundle 'tpope/vim-unimpaired'
+ Bundle 'tpope/vim-commentary'
  Bundle 'wellle/context.vim'
  Bundle 'mg979/vim-visual-multi', {'branch': 'master'}
 
  " Languages
  Bundle 'fatih/vim-go'
+ runtime ftplugin/man.vim
 
  filetype plugin indent on     " required!
  "
@@ -78,6 +80,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:fzf_history_dir = "~/.dots/fzf-history"
 
 " Some keyboard bindings
+map <silent> <F1> <nop>
 map <silent> <F2> :w<CR>
 imap <F10> 
 
@@ -88,4 +91,11 @@ noremap <silent> <F4> :Buffers<CR>
 noremap <silent> <F5> :tabnew<CR>
 
 " Context
-let g:context_max_per_indent = 2
+let g:context_max_height = 5
+
+" C
+set cinoptions=l1s,:0,(0,m1,W1s
+
+" Go
+let g:go_fmt_command="gopls"
+let g:go_gopls_gofumpt=1

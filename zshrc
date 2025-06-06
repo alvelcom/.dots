@@ -32,6 +32,11 @@ else
     PROMPT="> "
 fi
 
+present-mode() {
+    export PROMPT='$ '
+    export RPROMPT=''
+}
+
 # Force emacs key bindings
 bindkey -e
 
@@ -89,6 +94,7 @@ fi
 if which vim &> /dev/null; then
     export EDITOR=vim
     alias vi=vim
+    export MANPAGER="vim +MANPAGER --not-a-term -"
 elif which vi &> /dev/null; then
     export EDITOR=vi
 fi
